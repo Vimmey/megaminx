@@ -1,0 +1,87 @@
+<!DOCTYPE html>		<!-- HTML version declaration -->
+<html>
+<head>
+	<title>My first web application</title>
+	<style type="text/css"> 	<!-- Internal css -->
+		h1{
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<h1 style="border: 2px dotted red">I am learning Web Development</h1> <!-- Inline css -->
+	<!-- <h2>I am heading two</h2>
+	<h3>I am heading three</h3>
+	<h6>I am heading six</h6
+	<p>paragraph</p> -->
+
+	<form action="index.php" method="POST">
+		<label>First Name : <span style="color: red">*</span></label>
+		<input type="text" required placeholder="Enter your first name" ></br>   <!-- rewuires is the inbuilt keyword for mandatory fields instead of writing whole javascript -->
+
+		<label>Last Name : <span style="color: red">*</span></label>
+		<input type="text" required placeholder="Enter your last name" ></br>
+
+		<label>Email Id : <span style="color: red">*</span></label>
+		<input type="email" required placeholder="Enter your email" ></br>
+ 		
+ 		<label>Password: <span style="color: red">*</span></label>
+		<input type="password" required placeholder="Enter password" ></br>
+
+
+		<label>URL :</label>
+		<input type="url"> </br>
+
+		<label> DOB</label>
+		<input type="date"> </br></br>
+
+		<label> Month</label>
+		<input type="month"> </br></br>
+
+		<label> Week</label>
+		<input type="week"> </br></br>
+
+		<label> Color</label>
+		<input type="color"> </br></br>
+
+		<label>Numbers</label>
+		<input type="number"> </br></br>
+
+		<label>Range</label>
+		<input type="range"> </br></br>
+
+		<label>Search</label>
+		<input type="search"> </br></br>
+
+		<ol type = a>   <!-- type can b i for roman OR a OR A or 1 -->
+			<li>Cricket</li>
+			<li>Basketball</li>
+		</ol>
+
+		<input list="fruits">
+		<input list="vegetables">
+
+		<datalist id = "fruits">  <!-- for dropdown use datalist and pass the id to input list to link it to html -->
+			<option value = "Apple"></option>
+			<option value = "Banana"></option>
+			<option value = "Grapes"></option>
+		</datalist>
+
+
+		<datalist id = "vegetables">
+			<option value = "Potato" ></option>
+			<option value = "Onion"></option>
+			<option value = "Cabbage"></option>
+		</datalist>
+
+
+ 		<button>Submit</button>
+		
+
+
+	</form>
+
+
+</body>
+</html>
