@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Video Player</title>
+</head>
+<body>
+
+	<video controls poster="banner.jpg" muted loop id="video">    <!-- controls to show the controls of button .. poster is the image of video.. muted by default but can be unmuted manually.. loop as the video ends it wl play from starting irrespective of #t-->
+		<source src="arrow_1.mp4#t=15,30" type="video/mp4">  <!-- #t defines the time from whre we wnt to start video ex.from 15th sec-->
+		<source src="arrow_1.ogg#t=15,30" type="video/ogg">
+		<source src="arrow_1.mp3#t=15,30" type="video/mp3">
+
+		<track kind="subtitles" src="abc.vtt" label="English subtitles" srclang="en" default></track> <!-- creating subtitles-->
+	</video>
+
+	<button onclick="playVideo()">Play</button>
+	<button onclick="pauseVideo()">Pause</button>
+	<button onclick="stopVideo()">Stop</button>
+	<button onclick="forwardVideo()">Forward</button>
+	<button onclick="backwardVideo()">Backward</button>
+
+	<script type="text/javascript">
+	var ref= document.getElementById("video");
+		function playVideo(){
+			ref.play();
+			if(ref.playbackRate != 1) {
+				ref.playbackRate = 1;    <!-- if the forward.backward has chnged from default. now when we click play/pause 						it starts from default value --> 
+			}
+			
+		}
+
+		function pauseVideo(){			
+			ref.pause();	
+			ref.playbackRate = 1;
+		}
+
+		function stopVideo(){
+			ref.pause();
+			ref.currentTime=0;    <!-- beginning of video -->
+			  
+		}
+		
+		function forwardVideo(){
+			ref.playbackRate = 2*ref.playbackRate;
+		}
+ 
+ 		function backwardVideo(){
+			ref.playbackRate = (ref.playbackRate)/2;
+		}
+
+
+	</script>
+</body>
+</html>
