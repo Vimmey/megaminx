@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Geo Location API</title>
+</head>
+
+<body>
+
+<button id="run" onclick="locationCapture();">Run my Location</button>
+<div id="msg" style="border: 3px solid red">Result here</div>
+ 	
+ <script type="text/javascript">
+ 	function locationCapture() {
+ 		navigator.geolocation.getCurrentPosition(success,failure)
+ 	}
+
+ 	function success(position) {
+ 		var lat = position.coords.latitude;
+ 		var long = position.coords.longitude;
+ 		console.log("Latitude is " +lat + " " + " longitide is " +long );
+        document.getElementById("msg").innerHTML = "Latitude is " +lat + " " + " longitide is " +long ;
+ 	}
+
+ 	function failure() {
+ 		console.log("Failure!");
+ 	}
+ </script>	
+
+</body>
+</html>
