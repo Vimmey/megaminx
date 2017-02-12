@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Canvas Flag</title>
+	<style type="text/css">
+		canvas {
+			border: 3px solid red;
+		}
+	</style>
+</head>
+<body>
+	<canvas width="1000px" height="1000px" id="draw">		
+	</canvas>
+
+	<script type="text/javascript">
+		var ref = document.getElementById("draw");
+		var c = ref.getContext("2d");
+		c.fillStyle = 'rgb(251,68,0)';
+		c.fillRect(20,10,200,100);
+
+		c.fillStyle = 'rgb(252,252,252)';
+		c.fillRect(20,85,200,100);
+
+		c.fillStyle = 'rgb(0,198,0)';
+		c.fillRect(20,160,200,80);
+
+		c.fillStyle = 'blue';
+		c.fillRect(10,10,10,400);
+
+		c.fillStyle = 'red';
+		c.fillRect(30,400,40,10);
+
+		c.fillStyle = 'red';
+		c.fillRect(50,420,40,10);
+
+		c.fillStyle = 'red';
+		c.fillRect(70,440,40,10);
+
+		
+	</script>
+</body>
+</html>

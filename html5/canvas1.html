@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		canvas {
+			border: 3px solid red;
+		}
+	</style>
+</head>
+<body>
+	<canvas width="300" height="300" id="canvas">		
+	</canvas>
+
+	<script type="text/javascript">
+		var canvas = document.getElementById("canvas");
+		var c = canvas.getContext("2d");
+		c.fillStyle = 'red';
+
+		c.beginPath();
+		c.moveTo(50,20);   //refernce point from where every line is drawn
+		c.lineTo(200,20);
+		c.lineTo(20,100);
+		c.fill();
+		c.closePath();
+
+		c.beginPath();
+		c.moveTo(20,100); 
+		c.lineTo(100,130);
+		c.lineTo(100,130);
+		c.fill();		
+		c.closePath();
+
+		
+		// c.strokeStyle="yellow";
+		// c.lineWidth=3;
+		// c.stroke();
+
+	</script>
+</body>
+</html>
