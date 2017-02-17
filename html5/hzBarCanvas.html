@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Horizontal Bar Graph</title>
+	
+</head>
+<body>
+	<canvas width="1000px" height="1000px" id="draw">		
+	</canvas>
+
+	<script type="text/javascript">
+		var ref = document.getElementById("draw");
+		var c = ref.getContext("2d");
+
+		c.fillStyle = 'red';
+		c.fillRect(20,10,4,500);  // fillRect()
+		
+		c.fillStyle = 'red';
+		c.fillRect(21,507,500,4);
+
+		c.fillStyle = 'blue';
+		c.fillRect(50,408,40,100);
+
+		c.fillStyle = 'blue';
+		c.fillRect(120,130,40,377);
+
+		c.fillStyle = 'blue';
+		c.fillRect(190,380,40,128);
+		
+		c.fillStyle = 'blue';
+		c.fillRect(260,330,40,178);
+
+		c.fillStyle = 'blue';
+		c.fillRect(330,210,40,298);
+		
+		
+	</script>
+</body>
+</html>
