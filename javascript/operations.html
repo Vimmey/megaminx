@@ -1,0 +1,36 @@
+<script type="text/javascript">
+
+	var no_1 = 10;
+	var no_2 = 20.01;
+	var no_3 = "zenrays";
+	var no_4 = true;
+	var no_5 = 20;
+
+	var abc = null;    // only allocating memory no value... typeof abc is object
+	var xyz;		  // undefined : no memory allocation
+
+	var result_1 = no_1 + no_2;
+	console.log("final output is " + result_1); //30.01
+
+	var result_4 = no_1 + no_5;
+	console.log("final output is " + result_4); //30
+
+	var result_2 = no_1 + no_3;
+	console.log("final output is " + result_2); //10zenrays.. number typecasted to string
+
+	var result_3 = no_1 + no_4;
+	console.log("final output is " + result_3); //11 as true typecasted to 1 so 10+1
+
+	var result_4 = no_3 + no_4;
+	console.log("final output is " + result_4); //zenraystrue ... true typecasted to string
+
+	var result_5 = no_3 + xyz;
+	console.log("final output is " + result_5); //zenraysundefined
+
+	var result_6 = no_1 + xyz;
+	console.log("final output is " + result_6); //NaN
+ 
+ 	var result_7 = no_4 + xyz;
+	console.log("final output is " + result_7); //NaN
+
+</script>

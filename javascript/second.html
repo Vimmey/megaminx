@@ -1,0 +1,133 @@
+<script type="text/javascript">
+
+	var plastic = {
+	// color : ["white", "blue", "red"],
+	// // shape : ["round", "cyclindrical", "sqaure"],
+	// // brand : ["bisleri", "cello", "milton"],
+	// // volume : ["1l", "2l", "3l"],
+	// // purpose : ["water", "milk","soda"],
+
+		color : 										//each property as an object.. multiple objects
+			{
+				color_array1:
+					{							
+						white_array: "white"
+					},
+
+				color_array2:
+					{						
+						blue_array: "blue"
+					},	
+
+				color_array3:
+					{							
+						red_array: "red"
+					},
+			},	
+
+	
+
+		shape : 
+			{
+				shape_array1 :
+					{
+						round_array : "round"
+					},
+
+					shape_array2 :
+					{
+						round_array : "cyclindrical"
+					},
+
+					shape_array3 :
+					{
+						round_array : "sqaure"
+					},			
+
+				},
+			
+
+		brand : 
+			{
+				brand_array1 : 
+					{
+						bisleri_array : ["bisleri","bisleri2"]
+					},
+
+				brand_array2 : 
+					{
+						cello_array : "cello"
+					},
+
+				brand_array3 : 
+					{
+						milton_array : "milton"
+					},
+
+			},
+
+		volume : 
+			{
+				volume_array1: 
+					{
+						one_litre : "1l"
+					}, 
+
+				volume_array2: 
+					{
+						two_litre : "2l"
+					}, 
+
+				volume_array3: 
+					{
+						three_litre : "3l"
+					}, 
+			},
+
+		purpose : 
+			{
+				purpose_array1 : 
+					{
+						water_array : "water"
+					},
+
+				purpose_array2 : 
+					{
+						milk_array : "milk"
+					},
+
+				purpose_array3 : 
+					{
+						soda_array : "soda"
+					},
+			}
+			
+
+	};
+
+// alert(plastic["color"][1]);
+// alert(plastic.volume[1]);
+// alert(plastic.shape[1]);
+// alert(plastic.brand[1]);
+// alert(plastic.purpose[1]);
+// alert(plastic["color"][1]);
+
+console.log(plastic.color.color_array1.white_array); 	//will not work for alert or document write bcz only console can read the object
+console.log(plastic.shape.shape_array1.round_array);
+console.log(plastic.brand.brand_array1.bisleri_array);
+console.log(plastic.volume.volume_array2.two_litre);
+console.log(plastic.purpose.purpose_array2.milk_array);
+
+// console.log(plastic.shape.shape_array[1]);
+// console.log(plastic.brand.brand_array[1]);
+
+// console.log(plastic.brand.brand_array); //display all values
+
+// console.log(plastic["purpose"]["purpose_array"][1]);  //bracket notation
+// document.write(plastic.volume.volume_array[1]); // browser display
+
+
+
+
+
+</script>
