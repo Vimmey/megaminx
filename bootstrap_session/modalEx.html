@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Modal example</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">	
+	<script type="text/javascript" src="bootstrap/js/jquery.js"></script> <!-- jquaery first load than bootstrap.js-->
+	<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+	<style type="text/css">
+		
+	</style>
+
+</head>
+<body>
+
+	<div class="container">
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-2">Login</button>
+		<div class="modal" id="modal-2">
+			<div class="modal-dialog modal-xs">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h1 style="text-align: center;"><span class ="glyphicon glyphicon-user btn-md"></span>Register With</h1>
+						<ul class="nav nav-justified">
+							<li><a href=""><img src="facebook.png" width="50px" height="50px"></a></li>			
+							<li><img src ="twitter.png" width="50px" height="50px"></li>	
+							<li><img src ="github.png" width="50px" height="50px"></li>	
+							<li><img src ="link.png" width="50px" height="50px"></li>							
+						</ul>
+
+					</div>
+					<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<span class="glyphicon glyphicon-envelope btn-lg"></span>	
+							<input type="text" name="email" placeholder="Enter your Email">
+						</div>
+
+						<div class="form-group">
+						   <span class="glyphicon glyphicon-lock btn-lg"></span>	
+							<input type="text" name="password" placeholder="Enter your Password">
+						</div>
+
+						<div class="form-group">
+						   <span class="glyphicon glyphicon-lock btn-lg"></span>	
+							<input type="text" name="password" placeholder="Repeat Password">
+						</div>	
+
+
+					<div class="modal-footer">
+
+						<div class="form-group">
+							<button class="btn btn-success">Sign Up</button>
+						</div>
+						</form>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+</html>
