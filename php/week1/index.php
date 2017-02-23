@@ -10,7 +10,7 @@
 <body>
 <div id ="output">
 <?php
-$datevalue = date('d:m:y h:i:s');
+$datevalue = date('d:m:y');
 echo $datevalue;
 
 $datevalue = date('d:m:y H:i:s');
