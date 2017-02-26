@@ -1,0 +1,19 @@
+<script type="text/javascript">
+	
+	var man ={
+		"height" : {"Key_1": "value_1","Key_2": "value_2" },
+		"weight" : {"Key_3": "value_3","Key_4": "value_4" },
+		"location" : {"Key_5": "value_5","Key_6": "value_6" },
+	};
+
+	for (var i in man) {	// here i is to access key 
+		for(var j in man[i]) {
+			if(j%2 == 0){
+
+			console.log("Key " + j + " has value " + man[i][j]);   //man[i] gives value
+			}
+		}
+		// }
+		
+	}
+</script>
