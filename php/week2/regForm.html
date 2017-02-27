@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Forms</title>
+	<!-- <style type="text/css">
+	input{
+		display: block;
+		
+	</style>
+	} -->
+</head>
+<body>
+
+	<form method="POST" action="regForm.php" enctype="multipart/form-datah">
+		
+		<label>First Name : <span style="color: red">*</span></label>
+		<input type="text" required placeholder="Enter your first name" name="firstname"></br></br>
+
+		<label>Last Name : <span style="color: red">*</span></label>
+		<input type="text" required placeholder="Enter your last name" name="lastname"></br></br>
+
+		<label>Email Id : <span style="color: red">*</span></label>
+		<input type="email" required placeholder="Enter your email" name="email" ></br></br>
+ 		
+ 		<label>Password : <span style="color: red">*</span></label>
+		<input type="password" required placeholder="Enter password" name="password" ></br></br>
+
+		<label>Gender :</label>
+
+		<input type="radio" name="gender" value="Male">Male</input>
+		<input type="radio" name="gender" value="Female">Female</input>
+
+		<input type="radio" name="gender"> Other</input></br></br>
+
+		<input type="checkbox" name="hobbies[]" value="Travelling">Travelling</input>
+		<input type="checkbox" name="hobbies[]" value="Reading">Reading</input>
+		<input type="checkbox" name="hobbies[]" value="Singing">Singing</input></br></br>
+
+		<label> DOB</label>
+		<input type="date" name="dob"> </br></br>
+
+		<label> Phone No.</label>
+		<input type="tel" placeholder="Enter phone number" name="phone"></br></br>
+
+		<label> Address</label>
+		<input type="text" placeholder="Enter address" name="add"></br></br>
+
+		<input type="file" name="pic">
+
+		<input type="submit" value="submit"></input>
+	
+</form>
+</body>
+</html>
