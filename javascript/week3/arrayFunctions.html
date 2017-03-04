@@ -1,0 +1,40 @@
+<script type="text/javascript">
+
+	var a =[1, "vmy",true,"hello"];
+
+	console.log(a.length);
+	console.log(a);
+
+	console.log(a.push("tech",3));	//insert multiple at the end/top
+	console.log(a);
+
+	console.log(a.pop()); 	//delete topmost element
+	console.log(a);
+
+	console.log(a.shift());	//delete from bottom; can accept parameters  a.shift("hello") but doesnt execute, it wl alwayz delete from bottom most
+	console.log(a);
+
+ 	console.log(a.unshift("start")); 	//insert at bottom
+	console.log(a);
+
+	console.log(a.join(".."));  //joining/concatenate every element of array by .. (any char)
+	console.log(a.toString());	//converting array to string including comma
+	console.log(a);				//still an array
+
+
+	console.log(a.slice(1,4)); 	//starting point to ending-1 ie. 1,2,3rd index element
+	console.log(a.slice(1,-2)); //when negative value is given : it will slice upto length of array + (-2) i.e 5-2 = 3 so from 1,2nd index elemnt
+
+
+	// console.log(a.fill(25)); 	//every element will be replaced to 25
+
+	// for(var i=0;i<a.length;i++){
+	// 	console.log(a[i]);
+	// }
+
+	a.forEach(
+		function(ele) {   //ele variable is for iteration 
+			console.log(ele);
+		}
+	);
+</script>

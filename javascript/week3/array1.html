@@ -1,0 +1,13 @@
+<script type="text/javascript">
+	var arr =[1, "vmy",true,sample(),"hello"]; //can have any parameters with any dynamic length
+
+	function sample(){
+		console.log("inside function");
+		console.log(typeof arr);	//undefined as line2 is still not defined as array bcz before closing array, function is called so it wl enter sample().. after exceuting sample()goes back to arr n execute next parameter and when bracket is closed, array is defined;
+	}
+		
+	console.log(typeof arr);	// object as array is special object; here after sample() called,arrays gets deifind so object
+	console.log(arr[4]); 
+	console.log(arr[3]); 
+
+</script> 
