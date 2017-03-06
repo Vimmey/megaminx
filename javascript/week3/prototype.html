@@ -1,0 +1,30 @@
+<script type="text/javascript">
+	
+		var a = "string";
+		var b = [1,2,3];
+
+		//protype is for creating own functions
+
+		String.prototype.sample = function() {  //String is object;protype is keyword; sample is name of function
+			console.log("hello string");
+		}
+
+
+		// String{
+		//  myMethod(){
+		// 		console.log("inside myMethod");
+
+		// 	}
+		// }
+
+        a.sample();		//will bind string prototype to variable a which is string
+		// a.myMethod();
+
+
+		Array.prototype.sample = function() {
+			console.log("hello Array");
+		}	
+
+		b.sample();		//will bind array prototype to variable a which is array
+
+</script>

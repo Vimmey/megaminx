@@ -1,0 +1,48 @@
+<script type="text/javascript">
+	
+	(function () {			//declaring fnction without name
+		var a = "Vimmey Chopra";
+
+		console.log(a.length); //10
+
+		console.log(a.toUpperCase()); //to uppercase but orignal string will be as it is
+		console.log(a);
+
+
+		console.log(a=a.toUpperCase());  //change the original string to uppercase permanent
+		console.log(a);
+
+
+		console.log(a.toLowerCase());	//to lowercase but orignal string will be as it is
+		console.log(a);
+
+
+		console.log(a=a.toLowerCase());	//change the original string to lowercase permanent
+		console.log(a);
+
+		console.log("zenrays" + " " + "tech"); //concatenating
+
+		console.log(a.charAt(4));	//index from 0
+		console.log(a.charAt(-4));	//will not work but also no error
+
+
+		console.log(a.substr(0,5)); 	//0 to 4
+		console.log(a.substr(-5,2));	//length-5 = 10-5=5; thus 2 elements from 5th ie, 5th n 6th char
+
+
+		console.log(a.indexOf("m")); 	//first occurence
+		console.log(a.indexOf("x"));    //-1 ;not found
+
+
+		console.log(a.slice(2,-5));
+		console.log(a.slice(4));	//from 4th to end
+		console.log(a.slice(-2));	//from reverse
+
+
+	})
+
+   ();	//function calling
+
+
+
+</script>
