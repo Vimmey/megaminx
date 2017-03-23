@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="angular.js"></script>
+	<script>
+		var moduleRef = angular.module('main',['product']); //inbuilt function angular.module, depnds on product module
+		var moduleRef1 = angular.module('product',[]); //sqaure denoted not depnending on any other module 
+		var moduleRef2 = angular.module('user',[]);
+	</script>
+
+	<style type="text/css">
+		#container{
+			border: 4px solid red;
+			padding: 10px;
+			margin: 10px;
+		}
+	</style>
+</head>
+<body >	
+	The addition of 2 and 4 is {{2+4}}<br>
+
+	<div id =container ng-app ="main"> <!-- defining main body -->
+		The addition of 2 and 4 is {{2+4}}<br>
+		The multiplication of 2 and 4 is {{2*4}}<br>
+
+</body>
+</html>
