@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="angular.js"></script>
+	<script>
+		var moduleRef = angular.module('main',[]);
+		
+		moduleRef.controller('firstcontroller',fcFunc);
+		function fcFunc($scope){
+			$scope.name = "ZenRays Tech";
+			$scope.location = "Bangalore";
+			$scope.showDiv=false;
+
+			$scope.showDetails = function(){
+				alert("The name is "+$scope.name + " and location is "+$scope.location);
+				$scope.showDiv=true;
+			}
+			// alert("hey i am loaded!");
+		}
+
+		moduleRef.controller('footercontroller',footerFunc);		
+		function footerFunc($scope){
+			$scope.name = "Vimmey";
+		}
+	</script>
+
+	<style type="text/css">
+		#container,#fc,#footer{
+			border: 4px solid red;
+			padding: 10px;
+			margin: 10px;
+		}
+		#fc{
+			border-color: green;
+		}
+
+		#footer{
+			border-color: blue;
+	</style>
+
+	
+</head>
+<body >	
+	The addition of 2 and 4 is {{2+4}}<br>
+
+	<div id =container ng-app ="main"> <!-- defining main body -->
+	
+		<div id="fc" ng-controller ="firstcontroller">
+
+		<input type="text" ng-model="name"><br>
+		<input type="text" ng-model="location"><br>
+
+		<button ng-click="showDetails()">Display Details</button>
+
+		<select ng-model="offices" ng-change="showDetails()">
+			<option>Bangalore</option>
+			<option>Pune</option>
+			<option>Lucknow</option>
+		</select>
+		
+		<div id ="output" ng-show="showDiv"> hello show section</div>
+			the name is {{name}} and {{location}}<br>
+		</div> 
+
+		The addition of 2 and 4 is {{2+4}}<br>
+		The multiplication of 2 and 4 is {{2*4}}<br>
+
+		<div id="footer" ng-controller="footercontroller">
+			@copyright {{name}}<br>
+		</div>
+	</div>
+
+</body>
+</html>
