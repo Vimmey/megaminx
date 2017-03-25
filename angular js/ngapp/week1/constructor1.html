@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="angular.js"></script>
+	<script>
+		var moduleRef = angular.module('main',[]);
+		
+		moduleRef.controller('firstcontroller',fcFunc1);
+		function fcFunc1(){
+			this.name="zenrays";
+		}
+
+		moduleRef.controller('secondcontroller',fcFunc2);
+		function fcFunc2(){
+			this.name="vimmey";
+			this.showName = function(){
+				alert(this.name);
+			}
+		}
+
+	</script>
+</head>
+<body >	
+
+	<div id =container ng-app ="main"> 
+	
+		<div id="fc" ng-controller ="firstcontroller as ob">
+		The name is {{ob.name}}
+		</div>
+
+		<div id="fc" ng-controller ="firstcontroller as ob1">	<!-- different object -->
+		The name is {{ob1.name}}
+		</div>
+
+		<div id="fc" ng-controller ="secondcontroller as ob2">
+		The name is {{ob2.name}}
+		<button ng-click="ob2.showName()">Click</button>
+		</div>
+	</div>
+</body>
+</html>
