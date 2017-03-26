@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="angular.js"></script>
+	<script>
+	var myApp = angular.module('myApp', []);
+
+	myApp.controller('myCtrl',function ($scope) {
+        $scope.url = 'banner.jpg';
+    }
+);
+	</script>
+	</head>
+	<body>
+		<div ng-app="myApp">
+		    <div ng-controller="myCtrl">
+		        <img src="{{url}}"/>
+		        <img ng-src="{{url}}"/>
+		    </div>
+		</div>
+	</body>
+	</html>
