@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="angular.js"></script>
+	<script>
+	angular.module('myModule',[]).controller('exampleController',function($scope){
+		$scope.amount =1234.56778;
+	});
+	</script>
+	</head>
+	<body ng-app="myModule">
+		<div ng-controller="exampleController">
+		custom currency identifier(Default):{{amount |currency}}<br>
+		custom currency identifier(Rupee):{{amount |currency:'&#8377;':4}}<br> <!-- '&#8377;' is rupee symbol, :4 says upto 4 decimal places-->
+		</div>
+
+	</body>
+	</html>

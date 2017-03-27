@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="angular.js"></script>
+	<script>
+	angular.module('orderByApp',[]).controller('orderByController',function($scope){
+		$scope.friends =
+			[{name:'Smith',phone:'555-1512',age:20},
+			{name:'John',phone:'555-3456',age:13},
+			{name:'Vmy',phone:'555-7865',age:25},
+			];
+	});
+	</script>
+	</head>
+	<body>
+	<div ng-app="orderByApp">
+		<div ng-controller="orderByController">
+			<select ng-model="sortval">
+				<option>Name</option>
+				<option>Age</option>
+				<option>Phone</option>
+			</select>
+			<input type="checkbox" ng-model="ascdsc">
+			The value of checkbox is {{ascdsc}}<br>
+			The value of sortval is {{sortval}}<br>
+			<table border="4">
+			<tr>
+				<th>Name</th>
+				<th>Age</th>
+				<th>Phone</th>
+			</tr>
+			<tr ng-repeat="friend in friends |orderBy:sortval:ascdsc">
+				<td>{{friend.name}}</td>
+				<td>{{friend.age}}</td>
+				<td>{{friend.phone}}</td>
+			</tr>			
+			</table>
+		</div>
+	</div>
+	</body>
+	</html>

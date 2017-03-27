@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="angular.js"></script>
+	<script>
+	var app = angular.module('myApp',[]);
+	app.filter('greet',function(){
+		return function(name){
+			return 'Good Morning '+name;
+		}
+	});
+	</script>
+	</head>
+	<body data-ng-app="myApp">
+	<input type="text"ng-model="name">
+		{{"Vimmey Chopra"|greet}}<br>
+		{{"Raj Chopra" |greet}}<br>
+		{{name |greet}}<br>
+	</body>
+	</html>
