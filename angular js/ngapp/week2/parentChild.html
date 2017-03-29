@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="angular.js"></script>
+	<script>
+		var myModule = angular.module('myModule',[]); 
+		myModule.controller('parentCtrl',function(){
+			this.name ="Vimmey";
+			this.location ="Pan India";
+		});
+		myModule.controller('ChildCtrl',function(){
+			this.name="Cutie";
+		});
+	</script>
+
+	<style type="text/css">
+		#parent{
+			border: 4px solid red;
+			padding: 10px;
+			margin: 10px;
+		}
+		#child{
+			border: 4px solid blue;
+			padding: 10px;
+			margin: 10px;
+		}
+		#independent{
+			border: 4px solid green;
+			padding: 10px;
+			margin: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div id="boundry" ng-app="myModule">
+		<div id="parent" ng-controller="parentCtrl as parent">
+			The name is {{parent.name|uppercase}}<br>
+			<div id="child" ng-controller="ChildCtrl as child">
+			The name is {{child.name}}<br>
+			The parent name is {{parent.name|lowercase}}<br>
+			The parent location is {{parent.location}}<br>
+			</div>
+		</div>
+		<div id="independent" ng-controller="ChildCtrl as indchild">
+			The name is {{indchild.name}}<br>
+			The location is {{indchild.location}}<br>
+		</div>
+	</div>
+</body>
+</html>
